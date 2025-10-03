@@ -1,0 +1,445 @@
+/* --- Global Styles & Variables --- */
+
+:root {
+    --flutter-blue: #02569B;
+    --dark-blue: #012840;
+    --text-dark: #202124;
+    --text-light: #0f1011;
+    --bg-light-grey: #f8f9fa;
+    --bg-light-yellow: #fefcf0;
+    --border-color: #dadce0;
+    --grad-red-blue-35: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+.logo-link span,
+footer span {
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* --- Buttons & Links --- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--flutter-blue);
+    color: white;
+    border: 1px solid var(--flutter-blue);
+}
+
+.btn-primary:hover {
+    background-color: #0175c2;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--flutter-blue);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: #f1f8fe;
+    border-color: var(--flutter-blue);
+}
+
+.btn-link,
+.btn-link-white {
+    color: var(--flutter-blue);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-link-white {
+    color: white;
+}
+
+.btn-link .material-icons,
+.btn-link-white .material-icons {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.btn-link:hover .material-icons,
+.btn-link-white:hover .material-icons {
+    transform: translateX(4px);
+}
+
+
+/* --- Header --- */
+
+.site-header {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 8px;
+}
+
+.logo {
+    height: 24px;
+}
+
+.logo-link span {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+
+/* --- Hero Section --- */
+
+.hero {
+    background: var(--grad-red-blue-35);
+    /* light blue gradient background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    /*  changes made column to row  */
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    max-width: 600px;
+}
+
+.hero p {
+    font-size: 36px;
+    color: var(--text-light);
+    max-width: 940px;
+    display: inline-block;
+    /* keep inline behaviour but allow padding */
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* --- Features Grid --- */
+
+.features-grid {
+    padding: 80px 0;
+}
+
+.grid-3-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    text-align: center;
+}
+
+.feature-card img {
+    max-height: 120px;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+}
+
+
+/* --- Info & CTA Sections --- */
+
+.get-involved,
+.info-section {
+    padding: 80px 0;
+}
+
+.get-involved {
+    background: url('https://flutter.dev/assets/images/bg-grid-pattern.svg') center center;
+}
+
+.get-involved>.container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.info-section.yellow-bg {
+    background-color: var(--bg-light-yellow);
+}
+
+.two-col-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.two-col-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content a {
+    /* display: block; */
+}
+
+.text-content a svg {
+    size: 1px;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.image-content img {
+    max-width: 100%;
+}
+
+.text-content h4 {
+    color: var(--flutter-blue);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    letter-spacing: 0.5px;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin: 0 0 20px;
+    line-height: 1.2;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+
+/* --- Final CTA --- */
+
+.cta {
+    /* background-color: var(--dark-blue); */
+    color: white;
+    padding: 80px 0;
+    text-align: left;
+    /* use left for wider browser support */
+}
+
+.cta .container {
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    text-align: left;
+    /* ensure container uses left alignment */
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 60px;
+}
+
+.cta h2 {
+    font-size: 60px;
+    margin: 0 0 16px;
+}
+
+.cta p {
+    font-size: 1.1rem;
+    margin: 0 0 30px;
+    /* remove auto centering so text is left-aligned */
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+
+/* Explicitly ensure common elements inside .cta are left-aligned.
+   This avoids inheritance issues or other rules overriding alignment. */
+
+.cta h2,
+.cta p,
+.cta a {
+    text-align: left;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: flex-start;
+    /* align buttons to the left */
+    gap: 20px;
+    align-items: center;
+    /* vertically center buttons (y-axis) */
+}
+
+
+/* --- Footer --- */
+
+.site-footer-main {
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo img {
+    height: 30px;
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+
+.link-column h4 {
+    font-weight: 900;
+    font-size: 1rem;
+    margin: 0 0 16px;
+}
+
+.link-column a {
+    display: block;
+    text-decoration: none;
+    color: rgb(71, 71, 71);
+    font-weight: 100;
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.legal-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    margin-left: 20px;
+}
+
+
+/* --- Responsive Design --- */
+
+@media (max-width: 900px) {
+    .nav-menu {
+        display: none;
+    }
+    /* Simplified for demo */
+    .two-col-layout,
+    .two-col-layout.reverse,
+    .get-involved>.container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    .text-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-3-col {
+        grid-template-columns: 1fr;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        /* keep buttons left-aligned on small screens */
+    }
+}
